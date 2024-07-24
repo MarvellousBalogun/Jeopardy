@@ -16,6 +16,11 @@ header h1 {
     margin: 0;
 }
 
+.score-adjust {
+    margin-top: 5px;
+    width: 80px;
+}
+
 .scoreboard {
     display: flex;
     justify-content: space-around;
@@ -79,4 +84,16 @@ header h1 {
 .question:hover {
     background-color: #1a936f;
     color: #fff;
+}
+
+/* Styled div for project summary */
+#project-summary {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#project-summary-link {
+    color: #fff; 
 }

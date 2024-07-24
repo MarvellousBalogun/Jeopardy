@@ -14,11 +14,27 @@
     <section class="scoreboard">
         <div class="team" id="team1">
             <h2>Team 1</h2>
-            <p class="score">Score: <span>0</span></p>
+            <p class="score">Score: <span id="team1-score">0</span></p>
+            <input type="number" id="team1-input" class="score-adjust" placeholder="Adjust score">
+            <button onclick="adjustScore('team1')">Update</button>
         </div>
         <div class="team" id="team2">
             <h2>Team 2</h2>
-            <p class="score">Score: <span>0</span></p>
+            <p class="score">Score: <span id="team2-score">0</span></p>
+            <input type="number" id="team2-input" class="score-adjust" placeholder="Adjust score">
+            <button onclick="adjustScore('team2')">Update</button>
+        </div>
+        <div class="team" id="team3">
+            <h2>Team 3</h2>
+            <p class="score">Score: <span id="team3-score">0</span></p>
+            <input type="number" id="team3-input" class="score-adjust" placeholder="Adjust score">
+            <button onclick="adjustScore('team3')">Update</button>
+        </div>
+        <div class="team" id="team4">
+            <h2>Team 4</h2>
+            <p class="score">Score: <span id="team4-score">0</span></p>
+            <input type="number" id="team4-input" class="score-adjust" placeholder="Adjust score">
+            <button onclick="adjustScore('team4')">Update</button>
         </div>
     </section>
 
@@ -55,18 +71,9 @@
             <div class="question">$400</div>
             <div class="question">$500</div>
         </div>
-        <div class="category">
-            <div class="category-title">Category 5</div>
-            <div class="question">$100</div>
-            <div class="question">$200</div>
-            <div class="question">$300</div>
-            <div class="question">$400</div>
-            <div class="question">$500</div>
-        </div>
     </div>
 
-    <footer>
-        <p>Created by Your Name</p>
-    </footer>
+    <a href="project-summary.html" id="project-summary-link">Project Summary</a>
+    <script src="jeopardy.js"></script>
 </body>
 </html>
