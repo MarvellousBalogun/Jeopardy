@@ -16,11 +16,6 @@ header h1 {
     margin: 0;
 }
 
-.score-adjust {
-    margin-top: 5px;
-    width: 80px;
-}
-
 .scoreboard {
     display: flex;
     justify-content: space-around;
@@ -34,6 +29,12 @@ header h1 {
     padding: 10px;
 }
 
+.update{
+    background-color: #fff;
+    color: black;
+    width: 70px;
+}
+
 .team h2 {
     margin: 0;
     font-size: 1.5rem;
@@ -42,6 +43,10 @@ header h1 {
 .team .score {
     font-size: 1.2rem;
     margin: 5px 0;
+}
+
+.scoreDisplay{
+    color: black;
 }
 
 .team .score span {
@@ -71,6 +76,7 @@ header h1 {
 }
 
 .question {
+    color: black;
     background-color: #fff;
     border: 1px solid #1a936f;
     padding: 15px 0;
@@ -81,19 +87,23 @@ header h1 {
     font-size: 1.2rem;
 }
 
-.question:hover {
-    background-color: #1a936f;
-    color: #fff;
+.popup{
+    width: 800px;
+    height: 500px;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color:#1a936f;
+    transform: translate(-50%, -50%) scale(0.1);
+    padding: 0 30px 30px;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
 }
 
-/* Styled div for project summary */
-#project-summary {
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-#project-summary-link {
-    color: #fff; 
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
 }
