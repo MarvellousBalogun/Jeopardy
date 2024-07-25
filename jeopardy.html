@@ -7,69 +7,81 @@
     <link rel="stylesheet" href="jeopardy.css">
 </head>
 <body>
+
     <header>
         <h1>Jeopardy Board</h1>
     </header>
-    
-    <section class="scoreboard">
-        <div class="team" id="team1">
-            <h2>Team 1</h2>
-            <p class="score">Score: <span id="team1-score">0</span></p>
-            <input type="number" id="team1-input" class="score-adjust" placeholder="Adjust score">
-            <button onclick="adjustScore('team1')">Update</button>
-        </div>
-        <div class="team" id="team2">
-            <h2>Team 2</h2>
-            <p class="score">Score: <span id="team2-score">0</span></p>
-            <input type="number" id="team2-input" class="score-adjust" placeholder="Adjust score">
-            <button onclick="adjustScore('team2')">Update</button>
-        </div>
-        <div class="team" id="team3">
-            <h2>Team 3</h2>
-            <p class="score">Score: <span id="team3-score">0</span></p>
-            <input type="number" id="team3-input" class="score-adjust" placeholder="Adjust score">
-            <button onclick="adjustScore('team3')">Update</button>
-        </div>
-        <div class="team" id="team4">
-            <h2>Team 4</h2>
-            <p class="score">Score: <span id="team4-score">0</span></p>
-            <input type="number" id="team4-input" class="score-adjust" placeholder="Adjust score">
-            <button onclick="adjustScore('team4')">Update</button>
-        </div>
-    </section>
+    <form action="Home.php" method="post">
+        <section class="scoreboard">
+            <div class="team" id="team1">
+                <h2>Team 1</h2>
+                <p class="score">
+                    Score: 
+                    <input class="scoreDisplay" name="Team1_score" id="team1-score" readonly>
+                </p>
+                <input type="number" id="team1-input" class="score-adjust" placeholder="Adjust score">
+                <div class="update" onclick="adjustScore('team1')" >Update</div>
+            </div>
+            <div class="team" id="team2">
+                <h2>Team 2</h2>
+                <p class="score">Score: <span id="team2-score">0</span></p>
+                <input type="number" id="team2-input" class="score-adjust" placeholder="Adjust score">
+                <div class="update" onclick="adjustScore('team2')">Update</div>
+            </div>
+            <div class="team" id="team3">
+                <h2>Team 3</h2>
+                <p class="score">Score: <span id="team3-score">0</span></p>
+                <input type="number" id="team3-input" class="score-adjust" placeholder="Adjust score">
+                <div class="update" onclick="adjustScore('team3')">Update</div>
+            </div>
+            <div class="team" id="team4">
+                <h2>Team 4</h2>
+                <p class="score">Score: <span id="team4-score">0</span></p>
+                <input type="number" id="team4-input" class="score-adjust" placeholder="Adjust score">
+                <div class="update" onclick="adjustScore('team4')">Update</div>
+            </div>
+            <input type="submit"  name="endgame" value="endgame">
+        </section> 
+    </form>
+
+    <div class="popup" id="popup">
+        <h2 id="questionTitle"> Hello </h2>
+        <p id="question_text"> This is a jeopardy question. </p>
+        <button type="button" id="closePopup">OK</button>
+    </div>
 
     <div class="jeopardy-board">
         <div class="category">
-            <div class="category-title">Category 1</div>
-            <div class="question">$100</div>
-            <div class="question">$200</div>
-            <div class="question">$300</div>
-            <div class="question">$400</div>
-            <div class="question">$500</div>
+            <div class="category-title">Literature</div>
+            <div class="question" id="Category1.1">$100</div>
+            <div class="question" id="Category1.2">$200</div>
+            <div class="question" id="Category1.3">$300</div>
+            <div class="question" id="Category1.4">$400</div>
+            <div class="question" id="Category1.5">$500</div>
         </div>
         <div class="category">
-            <div class="category-title">Category 2</div>
-            <div class="question">$100</div>
-            <div class="question">$200</div>
-            <div class="question">$300</div>
-            <div class="question">$400</div>
-            <div class="question">$500</div>
+            <div class="category-title">World Capitals</div>
+            <div class="question" id="Category2.1">$100</div>
+            <div class="question" id="Category2.2">$200</div>
+            <div class="question" id="Category2.3">$300</div>
+            <div class="question" id="Category2.4">$400</div>
+            <div class="question" id="Category2.5">$500</div>
         </div>
         <div class="category">
-            <div class="category-title">Category 3</div>
-            <div class="question">$100</div>
-            <div class="question">$200</div>
-            <div class="question">$300</div>
-            <div class="question">$400</div>
-            <div class="question">$500</div>
+            <div class="category-title">Science</div>
+            <div class="question" id="Category3.1">$100</div>
+            <div class="question" id="Category3.2">$200</div>
+            <div class="question" id="Category3.3">$300</div>
+            <div class="question" id="Category3.4">$400</div>
+            <div class="question" id="Category3.5">$500</div>
         </div>
         <div class="category">
-            <div class="category-title">Category 4</div>
-            <div class="question">$100</div>
-            <div class="question">$200</div>
-            <div class="question">$300</div>
-            <div class="question">$400</div>
-            <div class="question">$500</div>
+            <div class="category-title">American History</div>
+            <div class="question" id="Category4.1">$100</div>
+            <div class="question" id="Category4.2">$200</div>
+            <div class="question" id="Category4.3">$300</div>
+            <div class="question" id="Category4.4">$400</div>
+            <div class="question" id="Category4.5">$500</div>
         </div>
     </div>
 
